@@ -1,4 +1,4 @@
-latex-files += resume.tex
+latex-files += resume.tex resume.cls
 output := resume
 
 all:  ${output}.pdf
