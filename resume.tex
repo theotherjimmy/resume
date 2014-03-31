@@ -1,6 +1,14 @@
-\documentclass[a4paper,12pt]{resume}
+\documentclass[letterpaper,12pt]{resume}
 \pagestyle{plain}
 \begin{document}
+
+\let\olditemize\itemize
+\renewcommand{\itemize}{
+  \olditemize
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}
 
 \author{James Brisson}
 \email{theotherjimmy@gmail.com}
@@ -19,7 +27,7 @@ I am clearly passionate about Electrical Engineering as many of my hobbies are r
 
 \section{Education}
 \noindent
-\begin{tabular}{p{0.4\textwidth}p{0.6\textwidth}}
+\begin{tabular}{p{0.4\textwidth}p{0.55\textwidth}}
   BS in Electrical Engineering&
   Graduated from UT Austin in December 2013\\
   \noalign{\smallskip}
@@ -32,7 +40,7 @@ I am clearly passionate about Electrical Engineering as many of my hobbies are r
 
 \section{Skills}
 \noindent
-\begin{tabular}{p{0.4\textwidth}p{0.6\textwidth}}
+\begin{tabular}{p{0.4\textwidth}p{0.55\textwidth}}
   Test and Measurement&
   Signal Gereators, Osilloscopes, Logic Analyser, Protocol Sniffer\\
   \noalign{\smallskip}
@@ -128,5 +136,10 @@ I am clearly passionate about Electrical Engineering as many of my hobbies are r
   \item
     QPSK transceiver
 \end{itemize}
+
+\par
+\begin{center}
+  Recommendations available upon request
+\end{center}
 
 \end{document}
