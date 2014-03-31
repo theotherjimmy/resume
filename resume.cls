@@ -80,7 +80,7 @@
   % Typeset webpage/phone in columns if both are specified, or
   % just on the LHS if only one is.
   \begin{center}
-    \emph{\@authorname}\par
+    \textbf{\@authorname}\par
     \ifthenelse{\equal{\@streetaddress}{} \and%
       \equal{\@citystatezip}{}}{}{%
       \ifthenelse{\equal{\@streetaddress}{} \or %
