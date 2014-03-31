@@ -11,6 +11,6 @@ dependencies
 building
 ========
 in a shell, run
-CODE(sh)
+```
 make all
-CODE
+```
