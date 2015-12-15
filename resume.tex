@@ -13,17 +13,17 @@
 \author{James Brisson}
 \email{theotherjimmy@gmail.com}
 \phone{(512) 497 9486}
-\streetaddress{614 South 1\textsuperscript{st} Street Apt. 366}
-\citystatezip{Austin, Tx 78704}
+\streetaddress{116 East 31\textsuperscript{st} Street Apt. 107}
+\citystatezip{Austin, Tx 78705}
 \maketitle
 
 \section{Profile}
-\noindent
-I am a UT-trained Electrical Engineer, and am widely considered a Jedi-Master programmer by my peers.
-I have designed the entire stack for computers from transistors and computer architecture to operating systems and application level software. 
-I have performed significant work in all development phases of a project life cycle.
-In addition to computers, I also have experience with interfacing to reality via DSP.
-I am clearly passionate about Electrical Engineering as many of my hobbies are related to programming, embedded systems, and automation.
+%\noindent
+%I am a UT-trained Electrical Engineer, and am widely considered a Jedi-Master programmer by my peers.
+%I have designed the entire stack for computers from transistors and computer architecture to operating systems and application level software. 
+%I have performed significant work in all development phases of a project life cycle.
+%In addition to computers, I also have experience with interfacing to reality via DSP.
+%I am clearly passionate about Electrical Engineering as many of my hobbies are related to programming, embedded systems, and automation.
 
 \section{Education}
 \noindent
@@ -39,9 +39,6 @@ I am clearly passionate about Electrical Engineering as many of my hobbies are r
   \noalign{\smallskip}
   Notable Classes&
   Operating Systems Honours (using C), Real-time DSP Lab, Computer Architecture, Real-time Embedded Systems\\
-  \noalign{\smallskip}
-  Current Classes&
-  Multicore Computing, Algorithms\\
 \end{tabular}
 
 \section{Skills}
@@ -60,7 +57,7 @@ I am clearly passionate about Electrical Engineering as many of my hobbies are r
   Verilog, VHDL, C$\lambda$ash\\
   \noalign{\smallskip}
   Programming Languages&
-  C, Python, Common Lisp, Haskell, Scheme, Clojure, Java, Ruby, C++, Perl, Matlab/Octave, Bash/Zsh, TCL, elisp, Make, \LaTeX\ \\
+  C[++], Haskell, \LaTeX\, Python, Common Lisp, Scheme, Clojure, Ruby, Perl, Matlab/Octave, Bash/Zsh, TCL, elisp, Make \\
   \noalign{\smallskip}
   Software Development&
   Emacs, Vim, Make, Ant, Eclipse, Xilinx ISE, Cadence, SimVision\\
@@ -69,6 +66,9 @@ I am clearly passionate about Electrical Engineering as many of my hobbies are r
 \subsection{Operating Systems}
 \begin{itemize}
   \item
+    Modified the Linux kernel scheduler and implemented several kernel modules,
+    both for research
+  \item
     Developed an exokernel for the i686 in C and assembly; ext2 drivers, self-hosting, graphical
   \item
     Implemented an RTOS for the ARM Cortex-M in C and assembly
@@ -76,10 +76,24 @@ I am clearly passionate about Electrical Engineering as many of my hobbies are r
     Compiled custom kernels, Linux and Android, with patching
 \end{itemize}
 
+\pagebreak
 \section{Research}
+\subsection{Buddythreads: Scheduler-Base Side Channel Defenses}
+A modification to the Linux kernel that allows a process to request that it
+should always be scheduled simultaneously with another, ``buddy'' thread.
+This allows the buddy thread to make noise on shared resources that may be used
+for side channels.
+I also developed and evaluated several methods for creating noise on these
+shared resources and showed that perfect information of the victim's leakage is
+sufficient to thwart attacks..
+
+Submitted to ISCA 2016.
+
 \subsection{Bubbles Secure Sharing System}
+\noindent
 A prototype security system that refactors the sharing out of mobile and web applications and makes it secure.
-Sharing is then done on a 'Bubble' level, where information is grouped by the user into a single sharable package.
+Sharing is then done on a 'Bubble' level, where information is grouped by the
+user into a single package, or folder,  that may be shared.
 Design principles of the system include:
 \begin{itemize}
   \item
@@ -87,10 +101,20 @@ Design principles of the system include:
   \item
     Interface integration between the application running in the Bubbles system and the system itself
   \item
-    Lightweight: The containers that provide the security for the Bubbles system should have minimal performance impact
+    Lightweight: The containers that provide the security for the Bubbles system
+    should have minimal performance impact
 \end{itemize}
+submitted to Okaland 2016
 
 \section{Professional Experience}
+\subsection{March 2014 - Ongoing: Staff Scientist at UT}
+Working on several academic research projects, including buddythreads and
+bubbles, mentioned above.
+
+\subsection{Jan 2015 - May 2015 and Aug 2015 - Dec 2015: Teaching Assistant}
+During Spring 2015 I was a TA for EE319K, Intro to Embedded Systems, and During
+the Fall of the same year I was a TA for EE379K, Operating Systems.
+
 \subsection{May 2013 - December2013: Intern Silicon Labs}
 \begin{itemize}
   \item
@@ -148,23 +172,27 @@ Design principles of the system include:
 \section{Projects}
 \begin{itemize} 
   \item
-    Remote controlled mobile couch with turn signals
+    Aura: An Arch Linux package manager wrapper written in Haskell
   \item
-    Intelligent ground vehicle software design
+    Moses: A bluetooth controlled holonomic robot
   \item
-    Planar image stitching algorithm using phase correlation
+    Automated framework for estimating channel capacities of contention based channels
   \item
-    QPSK transceiver
+    RASLib: intro to robotics library targeted at the TI Stellaris/Tiva Launchpads
   \item
     Custom Keyboard, with custom layout and firmware
   \item
-    libholonomic: holonomic (omni-wheel) drive and localisation library in C
+    Intelligent ground vehicle software design
   \item
-    RASLib: intro to robotics library targeted at the TI Stellaris/Tiva Launchpads
+    Remote controlled mobile couch with turn signals
   \item
     Robotics Booster-pack for TI Stellaris/Tiva Launchpads (PCB design)
   \item 
     Discussion Day: Tracking of student understanding through random sampling. Android application in Scheme
+  \item
+    Planar image stitching algorithm using phase correlation
+  \item
+    QPSK transceiver
 \end{itemize}
 
 \par
