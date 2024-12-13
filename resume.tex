@@ -21,13 +21,13 @@
 \noindent
 \begin{tabular}{p{0.4\textwidth}p{0.55\textwidth}}
   Programming Languages&
-  Rust, C[++], Haskell, \LaTeX\, Python, Common Lisp, Scheme, Clojure, Bash/Fish, elisp, Make \\
+  Rust, C[++], Haskell, \LaTeX\, Python, Bash, Make \\
   \noalign{\smallskip}
   Assemblies&
-  ARMv7E-M (GAS), Intel i686 (GAS), Freescale 6812, LC3, TI TMS320C6000 DSP, \\
+  ARMv7E-M (GAS), Intel i686 (GAS), Freescale 6812, TI TMS320C6000 DSP, \\
   \noalign{\smallskip}
   Software Development&
-  Git, Merge Request workflow, Vim, Make\\
+  Git, Merge Request workflow, GDB\\
 \end{tabular}
 
 \section{Education}
@@ -48,16 +48,18 @@
   \item
     Modified the Linux kernel scheduler and implemented several kernel modules
   \item
-    Developed an exokernel for i686 in C and assembly; ext2 drivers, self-hosting, graphical
-  \item
-    Implemented an RTOS for the ARM Cortex-M in C and assembly
-  \item
-    Compiled custom kernels, Linux and Android, with patching
+    Developed an exokernel for i686 in C and asm; ext2 drivers, self-hosting, graphical
 \end{itemize}
 
 \section{Professional Experience}
-\subsection{May 2019 - Ongoing: Embedded Linux Software Engineer at Arm}
+\subsection{May 2019 - Nov 2024: Embedded Firmware Engineer at Arm}
 \begin{itemize}
+  \item
+    Benchmarked and improved TF-A memory footprint with custom tooling
+  \item
+    Snapshot debugger for Zepyhr with support for armv8m and TF-M
+  \item
+    Runtime debugger for Arm FVP including bridging to GDB and event logging
   \item
     Transitioned a Yocto Linux distribution from sysVinit to systemd
   \item
@@ -97,57 +99,29 @@ the Fall of the same year I was a TA for EE379K, Operating Systems.
     Developed waveform capture tool for firmware symbols on a simulated 8051 processor
 \end{itemize}
 
-\subsection{Summer 2010: Outback Director BTSR}
-\begin{itemize}
-  \item
-    Managed 3 staffers leading a trek a week
-  \item
-    High adventure backpacking program
-  \item
-    Planned and tracked food and gear distribution across many campsites
-\end{itemize}
-
-\subsection{Summer 2009: Scout Skills Director BTSR}
-\begin{itemize}
-  \item
-    Managed 3 staffers teaching classes
-  \item
-    Taught camping and outdoor skills
-  \item
-    Responsible for the teaching of 14 classes
-  \item
-    Lead toten chit and fireman chit sessions
-\end{itemize}
-
 \section{Projects}
 \begin{itemize} 
-  \item
-    Aura: An Arch Linux package manager wrapper written in Haskell
   \item 
     Cmsis-pack-manager: A highly concurrent download utility for CMSIS Packs written in Rust and Python
   \item
     Moses: A bluetooth controlled holonomic robot and controller
   \item
-    Automated framework for estimating channel capacities of contention based channels
+    Automated framework for estimating side channel capacities of contention based channels
   \item
     RASLib: intro to robotics library targeted at the TI Stellaris/Tiva Launchpads
   \item
     Custom Keyboard, Dactyl, with custom layout and firmware in Mbed OS
   \item
-    Custom Keyboard, Mx Butterfly, with custom layout and firmware using TI Stellarisware
-  \item
     Intelligent ground vehicle software design
-  \item
-    Remote controlled mobile couch with turn signals
-  \item
-    Robotics Booster-pack for TI Stellaris/Tiva Launchpads (PCB design)
-  \item
-    Planar image stitching algorithm using phase correlation
-  \item
-    QPSK transceiver
 \end{itemize}
 
 \section{Research}
+\subsection{Leg: An arm Emulator for fuzzing}
+A prototype emulator foccussing on the bare minimum of hardware emulation to
+boot TF-A, the ability to snapshot and restore quickly and multi-threading.
+Leg emulates with both a simple interpreter and a JIT, with threads that fail
+to take the JIT lock falling back to the interpreter.
+
 \subsection{Buddythreads: Scheduler-Base Side Channel Defenses}
 A modification to the Linux kernel that allows a process to request that it
 should always be scheduled simultaneously with another, ``buddy'' thread.
@@ -158,50 +132,5 @@ shared resources and showed that perfect information of the victim's leakage is
 sufficient to thwart attacks.
 
 Submitted to ISCA 2016.
-
-\subsection{Bubbles Secure Sharing System}
-\noindent
-A prototype security system that refactors the sharing out of mobile and web 
-applications and makes it secure.
-Sharing is then done on a `Bubble' level, where information is grouped by the
-user into a single package, or folder,  that may be shared.
-Design principles of the system include:
-\begin{itemize}
-  \item
-    Principal of Least surprise: minimize changes to the programming environment of the developer
-  \item
-    Interface integration between the application running in the Bubbles system and the system itself
-  \item
-    Lightweight: The containers that provide the security for the Bubbles system
-    should have minimal performance impact
-\end{itemize}
-submitted to Okaland 2016
-
-\section{Community Service}
-\begin{itemize}
-  \item
-    Mentor for 2013 and 2014 UT RAS Robotathon, Region V, and Mercury teams
-  \item
-    Eagle Scout Project --- build privacy fence for Humane Society of Williamson county
-  \item
-    Over 125 hours of community service through Boy Scout Troop 513
-\end{itemize}
-
-\section{Society Memberships}
-\begin{itemize}
-  \item
-    Eagle Scout
-  \item
-    IEEE Robotics and Automation Society UT student branch
-  \item
-    IEEE UT student branch
-\end{itemize}
-
-
-
-\par
-\begin{center}
-  Recommendations available upon request
-\end{center}
 
 \end{document}
